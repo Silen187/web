@@ -1,0 +1,302 @@
+.joblist{
+    padding: 3rem 0;
+    padding-top: 12rem !important;
+    background-color: #f8f9fa;
+}
+
+.job-details{
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+}
+.joblist-content{
+    gap: 3rem;
+}
+.job-item{
+    padding: 3rem 2rem;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+    transition: var(--transition);
+}
+.job-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    transform: scale(1.05);
+}
+.job-item-img img{
+    max-width: 180px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.job-item-info{
+    margin-top: 2rem;
+}
+.job-item-info-item{
+    font-size: 12px;
+}
+.job-item-info-item.title{
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+.job-item-info-item.author{
+    font-size: 15px !important;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+.job-item-info-item.web{
+    font-size: 15px !important;
+    margin-top: 12px;
+}
+.job-item-info-item:not(.job-item-info-item.title) span:last-child{
+    opacity: 0.8;
+}
+.job-item-info-item.publish-year{
+    opacity: 0.6;
+    font-style: italic;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 330px){
+  .joblist-content{
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-chart-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .row-1{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+@media screen and (min-width: 515px){
+  .joblist-content{
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-chart-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .row-1{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 745px){
+    .joblist-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-chart-container{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .row-1{
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media screen and (min-width: 992px){
+    .joblist-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .job-item-img img{
+        max-width: 150px;
+    }
+    .grid-chart-container{
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .row-1{
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media screen and (min-width: 1230px){
+    .joblist-content{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .job-item-img img{
+        max-width: 120px;
+    }
+    .grid-chart-container {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .row-1{
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 40px ; /* Khoảng cách trên dưới */
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    text-align: center; /* Căn giữa nội dung trong nút */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pagination .active a {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Nút Previous/Next */
+.pagination .previous a,
+.pagination .next a {
+background-color: #f0f0f0;
+}
+
+/* Hiệu ứng hover */
+.pagination a:hover {
+background-color: #e9ecef;
+transform: scale(1.02);
+}
+
+.pagination a {
+transition: background-color 0.3s ease;
+}
+
+.pagination .previous a::before {
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+}
+
+.pagination .next a::after {
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+}
+
+  .filters {
+    display: flex; 
+    gap: 20px;
+    flex-wrap: wrap; 
+  }
+  
+  .row-1 {
+    display: grid;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container cha */
+  }
+  
+.dropdown {
+    display: inline-flex; /* Sử dụng Flexbox */
+    flex-direction: column;
+    position: relative;
+}
+
+.dropdown button {
+    background-color: white; /* Màu nền nhạt */
+    color: #333; /* Màu chữ */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    cursor: pointer; /* Biểu tượng con trỏ chuột là bàn tay */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+    height: 45px;
+    width: 225px;
+    text-align: left;
+    margin-bottom: 25px !important;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+    position: relative;
+    font-size: 15px !important;
+  }
+  .dropdown button:hover {
+    background-color: #e2e6ea; /* Màu nền đậm hơn khi hover */
+  }
+  .dropdown button::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid #7b7b7b; 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 250px !important;
+    z-index: 10;
+  }
+  
+  .dropdown-menu input[type="text"] {
+    position: absolute;
+    width: 225px !important;
+    height: 45px !important;
+    background-color: #fff;
+    padding-left: 10px;
+  }
+  .dropdown-menu input[type="text"]:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Kiểu dáng cho danh sách dropdown */
+  .dropdown-menu ul {
+    background-color: #fff; /* Màu nền trắng */
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%; /* Chiều rộng bằng nút */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+  }
+  
+  .dropdown-menu li {
+    padding: 10px;
+    list-style: none;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+    cursor: pointer !important;
+  }
+  
+  /* Hiệu ứng hover cho các lựa chọn trong danh sách */
+  .dropdown li:hover {
+    background-color: #f0f0f0; /* Màu nền nhạt khi hover */
+  }
+
+  .grid-chart-container {
+    display: grid;
+    gap: 10px;                      /* Khoảng cách giữa các ô */
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .grid-chart-item { /* Áp dụng cho mỗi chart */
+    position: relative;
+    background-color: white;
+    width: 225px;
+    height: 260px; /* Điều chỉnh chiều cao theo ý muốn */
+    justify-content: center;
+    padding-top: 18px;
+  }
+  .grid-chart-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+  .section-title-container {
+    display: flex;         /* Sử dụng Flexbox */
+    align-items: center;   /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: space-between; /* Phân bố đều khoảng cách giữa các phần tử */
+}

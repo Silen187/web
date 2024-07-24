@@ -1,0 +1,55 @@
+.powerbi-container {
+  overflow: hidden;
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.4s ease;
+  margin-top: 100px;
+  margin-bottom: 0px;
+}
+  
+  
+.powerbi-iframe {
+  height: 600px !important;
+  width: 100% !important;
+}
+  
+
+@media (max-width: 600px) {
+  /* CSS cho các phần tử ở màn hình có chiều rộng <= 600px */
+  .powerbi-iframe {
+    width: 100%;
+    height: auto; /* Hoặc bất kỳ giá trị nào phù hợp với bạn */
+  }
+}
+
+/* Thiết lập cho màn hình có chiều rộng từ 601px đến 1024px */
+@media (min-width: 601px) and (max-width: 992px) {
+  /* CSS cho các phần tử ở màn hình có chiều rộng từ 601px đến 1024px */
+  .powerbi-iframe {
+    width: 100%; /* Ví dụ: width chiếm 80% của chiều rộng màn hình */
+    height: auto; /* Hoặc bất kỳ giá trị nào phù hợp với bạn */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1415px) {
+  /* CSS cho các phần tử ở màn hình có chiều rộng từ 601px đến 1024px */
+  .powerbi-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.4s ease;
+    margin-top: 150px;
+    margin-bottom: 0px;
+  }
+  .powerbi-iframe {
+    width: 100%; /* Ví dụ: width chiếm 80% của chiều rộng màn hình */
+    height: auto; /* Hoặc bất kỳ giá trị nào phù hợp với bạn */
+  }
+}
+/* Thiết lập cho màn hình có chiều rộng lớn hơn hoặc bằng 1025px */
+@media (min-width: 1415px) {
+  /* CSS cho các phần tử ở màn hình có chiều rộng >= 1025px */
+  .powerbi-iframe {
+    width: 800px; /* Ví dụ: width cố định là 600px */
+    height: auto; /* Hoặc bất kỳ giá trị nào phù hợp với bạn */
+  }
+}
